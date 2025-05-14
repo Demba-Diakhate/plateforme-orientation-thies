@@ -17,7 +17,7 @@
                               <form class="form-body" method="POST" action="{{ route('register') }}">
                                    @csrf
                                    <div class="row g-3">
-                                        <!-- Champ Name -->
+
                                         <div class="col-12">
                                              <label for="inputName" class="form-label">Name</label>
                                              <div class="ms-auto position-relative">
@@ -32,7 +32,6 @@
                                              @enderror
                                         </div>
                               
-                                        <!-- Champ Email -->
                                         <div class="col-12">
                                              <label for="inputEmailAddress" class="form-label">Email Address</label>
                                              <div class="ms-auto position-relative">
@@ -47,7 +46,6 @@
                                              @enderror
                                         </div>
                               
-                                        <!-- Champ Password -->
                                         <div class="col-12">
                                              <label for="inputChoosePassword" class="form-label">Enter Password</label>
                                              <div class="ms-auto position-relative">
@@ -62,7 +60,6 @@
                                              @enderror
                                         </div>
                               
-                                        <!-- Conditions -->
                                         <div class="col-12">
                                              <div class="form-check form-switch">
                                                   <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="terms">
@@ -75,14 +72,12 @@
                                              @enderror
                                         </div>
                               
-                                        <!-- Submit -->
                                         <div class="col-12">
                                              <div class="d-grid">
                                                   <button type="submit" class="btn btn-primary radius-30">Sign Up</button>
                                              </div>
                                         </div>
                               
-                                        <!-- Separateur -->
                                         <div class="col-12">
                                              <div class="login-separater text-center">
                                                   <span>OR SIGN UP WITH EMAIL</span>
@@ -90,7 +85,6 @@
                                              </div>
                                         </div>
                               
-                                        <!-- Réseaux sociaux -->
                                         <div class="col-12">
                                              <div class="d-flex align-items-center gap-3 justify-content-center">
                                                   <button type="button" class="btn btn-white text-danger"><i class="bi bi-google me-0"></i></button>
@@ -100,7 +94,6 @@
                                              </div>
                                         </div>
                               
-                                        <!-- Lien vers connexion -->
                                         <div class="col-12 text-center">
                                              <p class="mb-0">Already have an account?
                                                   <a href="{{ route('login') }}">Sign in here</a>
