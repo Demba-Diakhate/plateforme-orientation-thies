@@ -19,8 +19,11 @@
             </style>
         @endif
     </head>
-    <body>
+    <body class="bg-vertClair/5">
+
      <livewire:Navbar />
+
      @yield('content')
+
     </body>
 </html>
