@@ -56,6 +56,9 @@ html.color-header .user-box {
 html.color-header .mobile-toggle-menu {
 	color: #fff
 }
+.switcher-body {
+	background: #3361ff!important
+}
 .switcher-body .headercolor1 {
 	background: #3361ff!important
 }
