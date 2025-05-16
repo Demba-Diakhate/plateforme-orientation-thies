@@ -9,19 +9,50 @@
         <li class="font-medium hover:text-vertClair"><a href="#">CGU</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">B2B</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">Blog</a></li>
+        @guest
         <li class="relative group bg-vertSombre text-white font-medium">
             <div class="flex justify-center items-center gap-2 p-2 cursor-pointer">
                 Se Connecter
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </div>
-            <ul class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
-                <li class="border border-vertSombre p-2 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair hover:text-white"><a href="#">Connexion</a></li>
-                <li class="bg-vertSombre p-2 text-white font-medium hover:bg-vertClair"><a href="#">Inscription</a></li>
+            <ul
+                class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
+                <li
+                    class="border border-vertSombre p-2 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair hover:text-white">
+                    <a href="{{ route('login') }}">Connexion</a>
+                </li>
+                <li class="bg-vertSombre p-2 text-white font-medium hover:bg-vertClair">
+                    <a href="{{ route('register') }}">Inscription</a>
+                </li>
             </ul>
         </li>
+        @endguest
+        
+        @auth
+        <li class="relative group bg-vertSombre text-white font-medium">
+            <div class="flex justify-center items-center gap-2 p-2 cursor-pointer">
+                <span>{{ Auth::user()->name }}</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+            <ul
+                class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
+                <li class="p-2 text-vertSombre font-medium hover:bg-vertClair hover:text-white">
+                    <a href="{{ route('profil.index') }}" class="w-full">Profil</a>
+                </li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                            class="w-full text-left p-2 cursor-pointer text-red-600  font-medium hover:bg-red-600 hover:text-white">Déconnexion</button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+        @endauth
     </ul>
 
     <!-- Button toggle -->

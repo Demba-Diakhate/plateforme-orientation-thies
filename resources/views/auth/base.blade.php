@@ -24,7 +24,6 @@
 
           <!--start wrapper-->
           <div class="wrapper">
-               @include('shared.navbar')
 
                <!--start content-->
                <main class="authentication-content">
@@ -33,11 +32,6 @@
 
                </main>
 
-               <!--end page main-->
-
-               <footer class="bg-white border-top p-3 text-center fixed-bottom">
-                    <p class="mb-0">Copyright ©2025. All right reserved.</p>
-               </footer>
 
           </div>
 
