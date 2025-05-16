@@ -5,7 +5,7 @@
     </h2>
   </div>
 
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-2">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Carte 1 -->
         <div class="flex flex-col gap-10 bg-white px-6 py-10 shadow text-center cursor-pointer hover:bg-vertClair/10">
           <div class="text-jaune flex justify-center text-5xl mb-4">

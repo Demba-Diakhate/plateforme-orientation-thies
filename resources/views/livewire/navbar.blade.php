@@ -39,7 +39,7 @@
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Formations</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mantorat</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Services</a></li>
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
@@ -71,7 +71,7 @@
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Formations</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Mantorat</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Mentorat</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Services</a></li>
         <div class="mx-7">
             <li wire:click="toggleAnnuaire" class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-4 py-4">
