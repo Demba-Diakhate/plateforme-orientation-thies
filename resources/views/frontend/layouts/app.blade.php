@@ -25,5 +25,7 @@
 
      @yield('content')
 
+     <livewire:Footer />
+     
     </body>
 </html>

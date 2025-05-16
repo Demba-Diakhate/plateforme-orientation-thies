@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-{{-- Hero section --}}
-<livewire:welcome.hero-section />
 
+<livewire:welcome.HeroSection />
+<livewire:welcome.Newsletter />
 
 @endsection

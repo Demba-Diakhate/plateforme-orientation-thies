@@ -1,4 +1,4 @@
-<div class="w-full max-w-7xl mx-auto bg-white shadow">
+<nav class="w-full max-w-7xl mx-auto bg-white shadow">
     <!-- Sub Navbar -->
   <div class="flex justify-between p-5 md:border-b border-gray-400">
     <div class="">
@@ -88,4 +88,4 @@
         </div>
     </ul>
   </div>
-</div>
+</nav>
