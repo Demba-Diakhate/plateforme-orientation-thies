@@ -47,12 +47,25 @@
                                         </div>
                               
                                         <div class="col-12">
-                                             <label for="inputChoosePassword" class="form-label">Enter Password</label>
+                                             <label for="inputChoosePassword" class="form-label">Entrez votre mot de pass</label>
                                              <div class="ms-auto position-relative">
                                                   <div class="position-absolute top-50 translate-middle-y search-icon px-3">
                                                        <i class="bi bi-lock-fill"></i>
                                                   </div>
                                                   <input type="password" name="password" class="form-control radius-30 ps-5" id="inputChoosePassword"
+                                                       placeholder="Password">
+                                             </div>
+                                             @error('password')
+                                             <small class="text-danger">{{ $message }}</small>
+                                             @enderror
+                                        </div>
+                                        <div class="col-12">
+                                             <label for="inputChoosePassword" class="form-label">Confirmer votre mot de pass</label>
+                                             <div class="ms-auto position-relative">
+                                                  <div class="position-absolute top-50 translate-middle-y search-icon px-3">
+                                                       <i class="bi bi-lock-fill"></i>
+                                                  </div>
+                                                  <input type="password" name="password_confirmation" class="form-control radius-30 ps-5" id="inputChoosePassword"
                                                        placeholder="Password">
                                              </div>
                                              @error('password')
