@@ -23,7 +23,9 @@ class UserController extends Controller
         }
         return $user;
     });
-        return view('backoffice.admin.users.index', compact('users'));
+        $roles = Role::all();
+
+        return view('backoffice.admin.users.index', compact('users', 'roles'));
     }
 
     /**
@@ -48,6 +50,7 @@ class UserController extends Controller
     public function show(string $id)
     {
         $user = User::with('roles')->findOrFail($id);
+        
         return view(
             'admin.users.show',
             compact('user')
@@ -59,9 +62,7 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $user = User::with('roles')->findOrFail($id);
-        $roles = Role::all();
-        return view('admin.users.edit', compact('user', 'roles'));
+    
     }
 
     /**
@@ -70,16 +71,14 @@ class UserController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $id,
             'role_id' => 'required|exists:roles,id',
         ]);
-
+    
         $user = User::findOrFail($id);
-        $user->update($request->only(['name', 'email']));
-        $user->assignRole($request->role_id);
-
-        return redirect()->route('backoffice.admin.users.index');
+        
+        $user->roles()->sync([$request->role_id]);
+    
+        return redirect()->route('admin.users.index')->with('success', 'Rôle modifié avec succès');
     }
 
     /**

@@ -37,19 +37,32 @@
                                    <div class="modal-dialog modal-sm">
                                         <div class="modal-content">
                                              <div class="modal-header">
-                                                  <h5 class="modal-title">Modal title</h5>
+                                                  <h5 class="modal-title">Modifier rôle</h5>
                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                              </div>
-                                             <div class="modal-body">
-
-                                             </div>
-                                             <div class="modal-footer">
-                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                             </div>
+                                             <form action="{{ route('backoffice.admin.users.update', $item->id) }}" method="POST">
+                                                  @csrf
+                                                  @method('PUT')
+                                                  <div class="modal-body">
+                                                       <div class="mb-3">
+                                                            <label for="role_id_{{$item->id}}" class="form-label">Rôle</label>
+                                                            <select name="role_id" id="role_id_{{$item->id}}" class="form-select" required>
+                                                                 @foreach($roles as $role)
+                                                                 <option value="{{ $role->id }}" {{ $item->roles->contains($role->id) ? 'selected' :
+                                                                      '' }}>
+                                                                      {{ $role->name }}
+                                                                 </option>
+                                                                 @endforeach
+                                                            </select>
+                                                       </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                                       <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                  </div>
+                                             </form>
                                         </div>
-                                   </div>
-                              </div>
+                                   </div>                         </div>
                          @endforeach
                     
                     </tbody>
