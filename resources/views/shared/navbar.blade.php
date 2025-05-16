@@ -10,7 +10,7 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
                          <li class="nav-item">
-                              <a class="nav-link" href="#">Home</a>
+                              <a class="nav-link" href="/">Acceuil</a>
                          </li>
                          <li class="nav-item">
                               <a class="nav-link" href="javascript:;">About</a>

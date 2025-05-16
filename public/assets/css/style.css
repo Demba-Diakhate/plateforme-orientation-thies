@@ -1528,7 +1528,7 @@ a {
 .btn-switcher {
     position: fixed;
     right: 0px;
-    top: 40%;
+    top: 2%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
