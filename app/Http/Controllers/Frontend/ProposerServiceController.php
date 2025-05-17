@@ -32,35 +32,6 @@ class ProposerServiceController extends Controller
           return view('frontend.inscription.coach');
      }
 
-     public function storeCoach(Request $request)
-     {
-          $request->validate([
-               'prenom' => 'required|string|max:100',
-               'nom' => 'required|string|max:100',
-               'email' => 'required|email|unique:profil_coaches,email',
-               'telephone' => 'nullable|string|max:30',
-               'adresse' => 'nullable|string',
-               'date_naissance' => 'nullable|date',
-               'sexe' => 'nullable|in:Homme,Femme,Autre',
-               'photo' => 'nullable|image|max:2048',
-               'specialite' => 'nullable|string|max:100',
-               'biographie' => 'nullable|string',
-               'linkedin' => 'nullable|url',
-               'site_web' => 'nullable|url',
-          ]);
-
-          $data = $request->all();
-          $data['user_id'] = Auth::user()->id;
-
-          if ($request->hasFile('photo')) {
-               $data['photo'] = $request->file('photo')->store('photos', 'public');
-          }
-
-          ProfilCoach::create($data);
-
-          return redirect()->route('frontend.accueil')->with('success', 'Inscription coach réussie !');
-     }
-
 
      public function createEntreprise()
      {

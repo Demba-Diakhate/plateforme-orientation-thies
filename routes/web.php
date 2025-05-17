@@ -24,18 +24,20 @@ Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->name('admin.')
     Route::resource('/annuaires', AnnuaireController::class);
 
     Route::resource('/users', UserController::class);
+
+
+    Route::controller(\App\Http\Controllers\Admin\ServicesController::class)->prefix('services')->name('services.')->group(function () {
+        Route::get('entreprises', 'entreprises')->name('entreprises');
+        Route::get('coachs', 'coaches')->name('coaches');
+        Route::get('freelances', 'freelances')->name('freelances');
+        Route::get('ecoles', 'ecoles')->name('ecoles');
+    });
+    
 });
 
 Route::prefix('service')->name('service.')->controller(ProposerServiceController::class)->group(function () {
-
     Route::get('entreprise', 'createEntreprise')->name('entreprise.create');
-    Route::post('entreprise', 'storeEntreprise')->name('entreprise.store');
-
     Route::get('ecole-formation', 'createEcoleFormation')->name('ecole_formation.create');
-
     Route::get('freelance', 'createFreelance')->name('freelance.create');
-    Route::post('freelance', 'storeFreelance')->name('freelance.store');
-
     Route::get('coach', 'createCoach')->name('coach.create');
-    Route::post('coach', 'storeCoach')->name('coach.store');
 });

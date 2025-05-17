@@ -192,7 +192,7 @@
                     </li>
                </ul>
           </li>
-          <li class="menu-label">Pages</li>
+          <li class="menu-label">Services</li>
           <li>
                <a class="has-arrow" href="javascript:;">
                     <div class="parent-icon"><i class="bi bi-lock"></i>
@@ -269,6 +269,38 @@
                     <div class="menu-title">Pricing Tables</div>
                </a>
           </li>--}}
+          <li class="menu-label">Gestion des Service</li>
+          <li class="menu-label">Services</li>
+          <li>
+               <a class="has-arrow" href="javascript:;">
+                    <div class="parent-icon"><i class="bi bi-briefcase"></i></div>
+                    <div class="menu-title">Services</div>
+               </a>
+               <ul>
+                    <li>
+                         <a href="{{route('admin.services.entreprises')}}">
+                              <i class="bi bi-building"></i> Entreprise
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('admin.services.ecoles')}}">
+                              <i class="bi bi-mortarboard-fill"></i>Centre de formation
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('admin.services.entreprises')}}">
+                              <i class="bi bi-person-badge"></i> Coach
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('admin.services.freelances')}}">
+                              <i class="bi bi-person"></i> Freelance
+                         </a>
+                    </li>
+               </ul>
+          </li>
+
+
           <li class="menu-label">Gestion des annuaires</li>
           <li>
                <a class="has-arrow" href="javascript:;">
