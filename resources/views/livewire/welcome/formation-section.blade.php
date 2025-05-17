@@ -37,7 +37,7 @@ $articles = [
 <div class="bg-gray-100/50">
     <div class="max-w-6xl mx-auto px-5 md:px-0 py-12 space-y-10">
         <h1 class="text-3xl text-center md:text-start md:text-4xl font-bold md:px-16 leading-10">
-            Découvre les <span class="bg-vertSombre px-2 text-white">formations</span> disponibles</h1>
+            Découvrer les <span class="text-transparent bg-clip-text bg-gradient-to-r from-vertSombre to-vertClair">formations </span>disponibles </h1>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
             @foreach ($articles as $article)
                 <livewire:CardFormation 
