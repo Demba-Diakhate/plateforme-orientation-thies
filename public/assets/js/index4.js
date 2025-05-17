@@ -1,188 +1,176 @@
-$(function() {
-	"use strict";
+$(function () {
+    "use strict";
 
-
-
-// chart 1
-var options = {
-    series: [{
-        name: "Today",
-        data: [450, 650, 440, 160, 350, 414, 555, 257, 400, 555, 257]
-    },{
-        name: "Yestreday",
-        data: [580, 350, 760, 350, 687, 352, 785, 241, 352, 685, 425]
-    }],
-    chart: {
-        foreColor: '#9a9797',
-        type: "area",
-        //width: 130,
-        height: 320,
-        toolbar: {
-            show: !1
+    // chart 1
+    var options = {
+        series: [
+            {
+                name: "Today",
+                data: [450, 650, 440, 160, 350, 414, 555, 257, 400, 555, 257],
+            },
+            {
+                name: "Yestreday",
+                data: [580, 350, 760, 350, 687, 352, 785, 241, 352, 685, 425],
+            },
+        ],
+        chart: {
+            foreColor: "#9a9797",
+            type: "area",
+            height: 320,
+            toolbar: { show: !1 },
+            zoom: { enabled: !1 },
+            dropShadow: {
+                enabled: 0,
+                top: 3,
+                left: 14,
+                blur: 4,
+                opacity: 0.12,
+                color: "#3461ff",
+            },
+            sparkline: { enabled: !1 },
         },
-        zoom: {
-            enabled: !1
+        markers: {
+            size: 0,
+            colors: ["#3461ff", "#12bf24"],
+            strokeColors: "#fff",
+            strokeWidth: 2,
+            hover: { size: 7 },
         },
-        dropShadow: {
-            enabled: 0,
-            top: 3,
-            left: 14,
-            blur: 4,
-            opacity: .12,
-            color: "#3461ff"
+        plotOptions: {
+            bar: {
+                horizontal: !1,
+                columnWidth: "35%",
+                endingShape: "rounded",
+            },
         },
-        sparkline: {
-            enabled: !1
-        }
-    },
-    markers: {
-        size: 0,
+        legend: {
+            show: false,
+            position: "top",
+            horizontalAlign: "left",
+            offsetX: -20,
+        },
+        dataLabels: { enabled: !1 },
+        grid: { show: true },
+        stroke: { show: !0, width: 3, curve: "smooth" },
         colors: ["#3461ff", "#12bf24"],
-        strokeColors: "#fff",
-        strokeWidth: 2,
-        hover: {
-            size: 7
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: !1,
-            columnWidth: "35%",
-            endingShape: "rounded"
-        }
-    },
-	legend: {
-        show: false,
-        position: 'top',
-        horizontalAlign: 'left',
-        offsetX: -20
-    },
-    dataLabels: {
-        enabled: !1
-    },
-    grid: {
-        show: true,
-        // borderColor: '#eee',
-        // strokeDashArray: 4,
-    },
-    stroke: {
-        show: !0,
-        width: 3,
-        curve: "smooth"
-    },
-    colors: ["#3461ff", "#12bf24"],
-    xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    },
-    tooltip: {
-        theme: 'dark',
-        y: {
-            formatter: function (val) {
-                return "" + val + ""
-            }
-        }
-    }
-  };
-
-  var chart = new ApexCharts(document.querySelector("#chart1"), options);
-  chart.render();
-
-
-
-   
-// chart 2
-var options = {
-    series: [{
-        name: "Messages",
-        data: [650, 440, 671, 414, 555, 901, 555]
-    }],
-    chart: {
-        foreColor: '#9a9797',
-        type: "bar",
-        //width: 130,
-        height: 320,
-        toolbar: {
-            show: !1
+        xaxis: {
+            categories: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ],
         },
-        zoom: {
-            enabled: !1
+        tooltip: {
+            theme: "dark",
+            y: {
+                formatter: function (val) {
+                    return "" + val + "";
+                },
+            },
         },
-        dropShadow: {
-            enabled: 0,
-            top: 3,
-            left: 14,
-            blur: 4,
-            opacity: .12,
-            color: "#3461ff"
+    };
+
+    var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+    chart1.render();
+
+    // chart 2 : Pie chart pour annuaires par statut
+    var options2 = {
+        series: window.annuairesByStatutData || [0],
+        chart: { height: 250, type: "pie" },
+        labels: window.annuairesByStatutLabels || ["Aucune donnée"],
+        fill: {
+            type: "gradient",
+            gradient: {
+                shade: "light",
+                type: "vertical",
+                shadeIntensity: 0.5,
+                gradientToColors: ["#00c6fb", "#ff6a00", "#98ec2d"],
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 1,
+            },
         },
-        sparkline: {
-            enabled: 0
-        }
-    },
-    markers: {
-        size: 0,
-        colors: ["#3461ff"],
-        strokeColors: "#fff",
-        strokeWidth: 2,
-        hover: {
-            size: 7
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: !1,
-            columnWidth: "45%",
-            // distributed: true,
-            //endingShape: "rounded"
-        }
-    },
-    dataLabels: {
-        enabled: !1
-    },
-    legend: {
-        show: false
-      },
-    stroke: {
-        show: !0,
-        width: 1.5,
-        curve: "smooth"
-    },
-    colors: ["#3461ff"],
-    xaxis: {
-        categories: ["1", "2", "3", "4", "5", "6", "7"]
-    },
-    tooltip: {
-        theme: "dark",
-        fixed: {
-            enabled: !1
+        colors: [
+            "#005bea",
+            "#ee0979",
+            "#17ad37",
+            "#ffb207",
+            "#12bf24",
+            "#6c757d",
+        ],
+        legend: {
+            show: false,
+            position: "top",
+            horizontalAlign: "left",
+            offsetX: -20,
         },
-        x: {
-            show: !1
+        responsive: [
+            {
+                breakpoint: 480,
+                options: {
+                    chart: { height: 270 },
+                    legend: { position: "bottom" },
+                },
+            },
+        ],
+    };
+
+    var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+    chart2.render();
+
+    // chart 3 : Donut chart pour utilisateurs par rôle
+    var options3 = {
+        series: window.usersByRoleData || [0],
+        chart: { width: 340, type: "donut" },
+        labels: window.usersByRoleLabels || ["Aucune donnée"],
+        fill: {
+            type: "gradient",
+            gradient: {
+                shade: "light",
+                type: "vertical",
+                shadeIntensity: 0.5,
+                gradientToColors: ["#667eea", "#00c6fb", "#f77062", "#98ec2d"],
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 1,
+            },
         },
-        y: {
-            title: {
-                formatter: function(e) {
-                    return ""
-                }
-            }
+        colors: [
+            "#764ba2",
+            "#005bea",
+            "#fe5196",
+            "#12bf24",
+            "#ffb207",
+            "#6c757d",
+        ],
+        legend: {
+            show: false,
+            position: "top",
+            horizontalAlign: "left",
+            offsetX: -20,
         },
-        marker: {
-            show: !1
-        }
-    }
-  };
+        responsive: [
+            {
+                breakpoint: 480,
+                options: {
+                    chart: { height: 260 },
+                    legend: { position: "bottom" },
+                },
+            },
+        ],
+    };
 
-  var chart = new ApexCharts(document.querySelector("#chart2"), options);
-  chart.render();
+    var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+    chart3.render();
 
-
-
-  new PerfectScrollbar(".client-message")
-
-
-
-
-
-
-
+    new PerfectScrollbar(".client-message");
 });
