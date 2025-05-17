@@ -34,21 +34,23 @@ $articles = [
     ]
 ];
 @endphp
-
-<div class="max-w-6xl mx-auto px-5 md:px-0 py-12 space-y-10">
-    <h1 class="text-3xl text-center md:text-start md:text-4xl font-bold md:px-16 leading-10">Découvre nos <span class="bg-vertSombre px-2 text-white">formations</span></h1>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-        {{-- <livewire:CardFormation /> --}}
-        @foreach ($articles as $article)
-            <livewire:CardFormation 
-                :title="$article['title']"
-                :description="$article['description']"
-                :image="$article['image']"
-                :date="$article['date']"
-                :tags="$article['tags']"
-                :link="$article['link']"
-            />
-        @endforeach
-    </div>
+<div class="bg-gray-100/50">
+    <div class="max-w-6xl mx-auto px-5 md:px-0 py-12 space-y-10">
+        <h1 class="text-3xl text-center md:text-start md:text-4xl font-bold md:px-16 leading-10">
+            Découvre les <span class="bg-vertSombre px-2 text-white">formations</span> disponibles</h1>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            @foreach ($articles as $article)
+                <livewire:CardFormation 
+                    :title="$article['title']"
+                    :description="$article['description']"
+                    :image="$article['image']"
+                    :date="$article['date']"
+                    :tags="$article['tags']"
+                    :link="$article['link']"
+                />
+            @endforeach
+        </div>
+    </div>  
 </div>
+
 

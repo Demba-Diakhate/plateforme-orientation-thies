@@ -9,7 +9,7 @@
     <ul class="hidden md:flex items-center gap-5 text-vertSombre">
         <li class="font-medium hover:text-vertClair"><a href="#">Aide</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">Contact</a></li>
-        <li class="relative group bg-vertSombre text-white font-medium">
+        <li class="relative group bg-gradient-to-r from-vertSombre to-vertClair text-white font-medium">
             <div class="flex justify-center items-center gap-2 p-2 cursor-pointer">
                 Se Connecter
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
