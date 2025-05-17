@@ -113,10 +113,10 @@
                 </svg>
             </li>
             <div class="absolute top-[51px] w-52 bg-white hidden group-hover:flex flex-col shadow-lg">
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Ecole Formation</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Freelance</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Coach</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.entreprise.create')}}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.ecole_formation.create')}}">Ecole Formation</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.coach.create')}}">Coach</a></li>
             </div>
         </div>
     </ul>
