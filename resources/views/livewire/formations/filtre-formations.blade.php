@@ -1,5 +1,5 @@
 <div class="flex flex-col gap-10 sm:px-16 px-4 my-12">
-    <h1 class="text-3xl font-bold text-violet">Choisir domaine</h1>
+    <h1 class="text-3xl font-bold">Choisir domaine</h1>
     <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10">
         <button
             class="cursor-pointer bg-violet/10 p-5 flex flex-row gap-6 w-66 duration-300 hover:bg-violet/20 active:bg-violet/20">
@@ -81,7 +81,7 @@
         <div class="flex sm:flex-row flex-col justify-between items-center w-full">
             <h1 class="text-3xl font-bold my-12">Dernières formations lancées</h1>
             <input 
-                class="w-full h-6 sm:w-auto px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border border-black/70 placeholder:text-black/70" 
+                class="w-full h-10 sm:w-auto px-4 py-2 rounded-none text-black focus:outline-none focus:ring-2 focus:ring-white border border-black/15 placeholder:text-black/70" 
                 type="text" 
                 placeholder="Recherchez"
                 wire.model.live="search">

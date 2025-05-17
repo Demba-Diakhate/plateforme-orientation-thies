@@ -32,6 +32,12 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="/assets/images/formations/formation7.jpg" class="object-cover absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="/assets/images/formations/formation8.jpg" class="object-cover absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="/assets/images/formations/formation8.jpg" class="object-cover absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
         </div>
         <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -42,12 +48,14 @@
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="5"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="6"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8" data-carousel-slide-to="7"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 9" data-carousel-slide-to="8"></button>
         </div>
     </div>
 
     <div class="absolute md:top-[20%] top-[5%] z-40 w-full flex flex-col justify-center gap-2 sm:px-16 px-4 sm:my-12 my-20">
         <h1 class="font-bold text-vertSombre md:text-5xl sm:text-4xl text-3xl bg-transparent sm:my-8">Se former</h1>
-        <h2 class="font-bold text-vertClair md:text-4xl sm:text-3xl text-2xl bg-transparent">Les formations existants en Thiès</h2>
+        <h2 class="font-bold text-white md:text-4xl sm:text-3xl text-2xl bg-transparent">Les formations existants en Thiès</h2>
         <p class="md:text-xl sm:text-base sm:pr-20 text-white sm:my-4">Diverses formations sont disponibles en Thiès pour vous aider à acquérir des compétences solides et de vous préparer au monde du travail.</p>
     </div>
 </div>
