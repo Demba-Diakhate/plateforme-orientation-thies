@@ -1,4 +1,4 @@
-<nav class="w-full max-w-7xl mx-auto bg-white shadow">
+<nav class="w-full max-w-7xl mx-auto bg-white shadow-sm">
     <!-- Sub Navbar -->
   <div class="flex justify-between p-5 md:border-b border-gray-400">
     <div class="">
@@ -31,6 +31,10 @@
         @endguest
         
         @auth
+        @php
+            $role = Auth::user()->roles->pluck('name')->first();
+        @endphp
+        @if ($role !== 'Utilisateur')
         <li class="relative group bg-vertSombre text-white font-medium">
             <div class="flex justify-center items-center gap-2 p-2 cursor-pointer">
                 <span>{{ Auth::user()->name }}</span>
@@ -38,10 +42,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </div>
-            <ul
-                class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
-                <li class="p-2 text-vertSombre font-medium hover:bg-vertClair hover:text-white">
-                    <a href="{{ route('profil.index') }}" class="w-full">Profil</a>
+            
+            <ul class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
+                <li class="p-2 text-vertSombre font-medium hover:bg-vertClair hover:text-white ">
+                    <a href="{{ route('profil.index') }}" class="w-full">Mon espace</a>
                 </li>
                 <li>
                     <form method="POST" action="{{ route('logout') }}">
@@ -52,6 +56,20 @@
                 </li>
             </ul>
         </li>
+        @else
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="flex justify-center bg-red-600 text-white items-center gap-2 p-2 cursor-pointer">
+                Déconnexion
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M6 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm10.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L18.586 13H10a1 1 0 1 1 0-2h8.586l-2.293-2.293a1 1 0 0 1 0-1.414"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </form>
+        @endif
+        
         @endauth
     </ul>
 
