@@ -2,7 +2,7 @@
 
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="absolute z-40 inset-0 bg-black/60"></div>
+        <div class="absolute z-40 inset-0 bg-black/70"></div>
         <div class="relative sm:h-[450px] h-62 overflow-hidden md:h-[400px]">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>

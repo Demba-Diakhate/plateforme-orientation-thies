@@ -7,7 +7,7 @@
         <title>Formations</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
+        {{-- {{-- <link rel="preconnect" href="https://fonts.bunny.net"> --}}
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
@@ -21,10 +21,13 @@
             </style>
         @endif
     </head>
-    <body>
+    <body class="bg-vertClair/5">
         <livewire:Navbar />
         <livewire:Formations.HeroSection />
         <livewire:Formations.FiltreFormations />
+        <livewire:welcome.Newsletter />
+        <livewire:Footer />
+        
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </body>
 </html>

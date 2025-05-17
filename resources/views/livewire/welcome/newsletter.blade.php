@@ -1,5 +1,5 @@
 {{-- Newsletter --}}
-<div class="max-w-7xl mx-auto bg-vertSombre text-white py-12 px-6">
+<div class="max-w-7xl mx-auto bg-vertSombre text-white py-12 px-6 my-24">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4">Abonnez-vous à notre newsletter</h2>
     <p class="text-sm text-white mb-6">

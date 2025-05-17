@@ -77,10 +77,14 @@
         </button>
     </div>
 
-    <div>
-        <div class="flex sm:flex-row flex-col justify-around">
+    <div class="flex flex-col w-full">
+        <div class="flex sm:flex-row flex-col justify-between items-center w-full">
             <h1 class="text-3xl font-bold my-12">Dernières formations lancées</h1>
-            <input type="text" wire.model.live="search">
+            <input 
+                class="w-full h-6 sm:w-auto px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white border border-black/70 placeholder:text-black/70" 
+                type="text" 
+                placeholder="Recherchez"
+                wire.model.live="search">
         </div>
         
         <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
