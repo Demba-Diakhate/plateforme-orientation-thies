@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Role;
 use App\Models\ProfilCoach;
 use App\Models\ProfilJeune;
 use App\Models\ProfilFreelance;
@@ -70,5 +71,10 @@ class User extends Authenticatable
 
     public function profilEcoleFormation(){
         return $this->belongsTo(ProfilEcoleFormation::class);
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
     }
 }

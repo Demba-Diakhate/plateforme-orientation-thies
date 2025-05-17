@@ -54,10 +54,10 @@
                          </li>
                     </ul>
                     <div class="d-flex ms-3 gap-3">
-                         <a href="authentication-signin-with-header-footer.html"
-                              class="btn btn-primary btn-sm px-4 radius-30">Login</a>
-                         <a href="authentication-signup-with-header-footer.html"
-                              class="btn btn-white btn-sm px-4 radius-30">Register</a>
+                         <a href="{{route('login')}}"
+                              class="btn btn-primary btn-sm px-4 radius-30">Connexion</a>
+                         <a href="{{route('register')}}"
+                              class="btn btn-white btn-sm px-4 radius-30">Inscription</a>
                     </div>
                </div>
           </div>

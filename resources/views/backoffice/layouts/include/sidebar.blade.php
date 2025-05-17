@@ -1,10 +1,10 @@
 <aside class="sidebar-wrapper" data-simplebar="true">
      <div class="sidebar-header">
           <div>
-               <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+               {{-- <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon"> --}}
           </div>
           <div>
-               <h4 class="logo-text">Skodash</h4>
+               <h4 class="logo-text">LOGO</h4>
           </div>
           <div class="toggle-icon ms-auto"><i class="bi bi-chevron-double-left"></i>
           </div>
@@ -12,26 +12,13 @@
      <!--navigation-->
      <ul class="metismenu" id="menu">
           <li>
-               <a href="javascript:;" class="has-arrow">
+               <a href="{{route('admin.index')}}">
                     <div class="parent-icon"><i class="bi bi-house-door"></i>
                     </div>
                     <div class="menu-title">Dashboard</div>
                </a>
-               <ul>
-                    <li> <a href="index.html"><i class="bi bi-arrow-right-short"></i>eCommerce</a>
-                    </li>
-                    <li> <a href="index2.html"><i class="bi bi-arrow-right-short"></i>Sales</a>
-                    </li>
-                    <li> <a href="index3.html"><i class="bi bi-arrow-right-short"></i>Analytics</a>
-                    </li>
-                    <li> <a href="index4.html"><i class="bi bi-arrow-right-short"></i>Project
-                              Management</a>
-                    </li>
-                    <li> <a href="index5.html"><i class="bi bi-arrow-right-short"></i>CMS Dashboard</a>
-                    </li>
-               </ul>
           </li>
-          <li>
+          {{-- <li>
                <a href="javascript:;" class="has-arrow">
                     <div class="parent-icon"><i class="bi bi-grid"></i>
                     </div>
@@ -312,41 +299,20 @@
                               Maps</a>
                     </li>
                </ul>
-          </li>
-          <li class="menu-label">Others</li>
+          </li> --}}
+          <li class="menu-label">Gestion Utilisateurs</li>
           <li>
-               <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><i class="bi bi-list-task"></i>
+               <a href="{{route('admin.users.index')}}" >
+                    <div class="parent-icon"><i class="bi bi-person"></i>
                     </div>
-                    <div class="menu-title">Menu Levels</div>
+                    <div class="menu-title">Utilisateurs</div>
                </a>
-               <ul>
-                    <li> <a class="has-arrow" href="javascript:;"><i class="bi bi-arrow-right-short"></i>Level One</a>
-                         <ul>
-                              <li> <a class="has-arrow" href="javascript:;"><i class="bi bi-arrow-right-short"></i>Level
-                                        Two</a>
-                                   <ul>
-                                        <li> <a href="javascript:;"><i class="bi bi-arrow-right-short"></i>Level
-                                                  Three</a>
-                                        </li>
-                                   </ul>
-                              </li>
-                         </ul>
-                    </li>
-               </ul>
           </li>
           <li>
                <a href="https://codervent.com/skodash/documentation/index.html" target="_blank">
                     <div class="parent-icon"><i class="bi bi-file-earmark-code"></i>
                     </div>
                     <div class="menu-title">Documentation</div>
-               </a>
-          </li>
-          <li>
-               <a href="https://themeforest.net/user/codervent" target="_blank">
-                    <div class="parent-icon"><i class="bi bi-headset"></i>
-                    </div>
-                    <div class="menu-title">Support</div>
                </a>
           </li>
      </ul>
