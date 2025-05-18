@@ -192,7 +192,7 @@
                     </li>
                </ul>
           </li>
-          <li class="menu-label">Pages</li>
+          <li class="menu-label">Services</li>
           <li>
                <a class="has-arrow" href="javascript:;">
                     <div class="parent-icon"><i class="bi bi-lock"></i>
@@ -268,51 +268,63 @@
                     </div>
                     <div class="menu-title">Pricing Tables</div>
                </a>
-          </li>
-          <li class="menu-label">Charts & Maps</li>
+          </li>--}}
+          <li class="menu-label">Gestion des Service</li>
+          <li class="menu-label">Services</li>
           <li>
                <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><i class="bi bi-graph-down"></i>
-                    </div>
-                    <div class="menu-title">Charts</div>
+                    <div class="parent-icon"><i class="bi bi-briefcase"></i></div>
+                    <div class="menu-title">Services</div>
                </a>
                <ul>
-                    <li> <a href="charts-apex-chart.html"><i class="bi bi-arrow-right-short"></i>Apex</a>
+                    <li>
+                         <a href="{{route('admin.services.entreprises')}}">
+                              <i class="bi bi-building"></i> Entreprise
+                         </a>
                     </li>
-                    <li> <a href="charts-chartjs.html"><i class="bi bi-arrow-right-short"></i>Chartjs</a>
+                    <li>
+                         <a href="{{route('admin.services.ecoles')}}">
+                              <i class="bi bi-mortarboard-fill"></i>Centre de formation
+                         </a>
                     </li>
-                    <li> <a href="charts-highcharts.html"><i class="bi bi-arrow-right-short"></i>Highcharts</a>
+                    <li>
+                         <a href="{{route('admin.services.entreprises')}}">
+                              <i class="bi bi-person-badge"></i> Coach
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('admin.services.freelances')}}">
+                              <i class="bi bi-person"></i> Freelance
+                         </a>
                     </li>
                </ul>
           </li>
+
+
+          <li class="menu-label">Gestion des annuaires</li>
           <li>
                <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><i class="bi bi-pin-map"></i>
-                    </div>
-                    <div class="menu-title">Maps</div>
+                    <div class="parent-icon"><i class="bi bi-journal-bookmark"></i></div>
+                    <div class="menu-title">Annuaire</div>
                </a>
                <ul>
-                    <li> <a href="map-google-maps.html"><i class="bi bi-arrow-right-short"></i>Google
-                              Maps</a>
+                    <li>
+                         <a href="{{ route('admin.annuaires.create') }}">
+                              <i class="bi bi-plus-circle"></i> Ajouter Annuaire
+                         </a>
                     </li>
-                    <li> <a href="map-vector-maps.html"><i class="bi bi-arrow-right-short"></i>Vector
-                              Maps</a>
+                    <li>
+                         <a href="{{ route('admin.annuaires.index') }}">
+                              <i class="bi bi-list-ul"></i> Liste Annuaire
+                         </a>
                     </li>
-               </ul>
-          </li> --}}
+               </ul>      </li>
           <li class="menu-label">Gestion Utilisateurs</li>
           <li>
                <a href="{{route('admin.users.index')}}" >
                     <div class="parent-icon"><i class="bi bi-person"></i>
                     </div>
                     <div class="menu-title">Utilisateurs</div>
-               </a>
-          </li>
-          <li>
-               <a href="https://codervent.com/skodash/documentation/index.html" target="_blank">
-                    <div class="parent-icon"><i class="bi bi-file-earmark-code"></i>
-                    </div>
-                    <div class="menu-title">Documentation</div>
                </a>
           </li>
      </ul>
