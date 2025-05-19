@@ -10,23 +10,21 @@
         <li class="font-medium hover:text-vertClair"><a href="#">B2B</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">Blog</a></li>
         @guest
-        <li class="relative group bg-vertSombre text-white font-medium">
+        <li class="relative group bg-gradient-to-r from-vertSombre to-vertClair text-white font-medium">
             <div class="flex justify-center items-center gap-2 p-2 cursor-pointer">
                 Se Connecter
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </div>
-            <ul
-                class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
-                <li
-                    class="border border-vertSombre p-2 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair hover:text-white">
-                    <a href="{{ route('login') }}">Connexion</a>
-                </li>
-                <li class="bg-vertSombre p-2 text-white font-medium hover:bg-vertClair">
-                    <a href="{{ route('register') }}">Inscription</a>
-                </li>
-            </ul>
+            <div class="absolute top-10 right-0 w-52 bg-white p-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
+                <a href="{{ route('login') }}" class="p-2 border border-vertSombre text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair hover:text-white">
+                    Connexion
+                </a>
+                <a href="{{ route('register') }}" class="bg-vertSombre p-2 text-white font-medium hover:bg-vertClair">
+                   Inscription
+                </a>
+            </div>
         </li>
         @endguest
         
@@ -89,7 +87,23 @@
         <li class="hover:bg-gray-100 px-5 py-4"><a href="/formations">Formations</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="/emploi_stage">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
-        
+
+        <div class="relative group">
+            <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
+                <div>Proposer Mes Services</div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </li>
+            <div class="absolute top-[51px] w-52 bg-white hidden group-hover:flex flex-col shadow-lg">
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.entreprise.create')}}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.ecole_formation.create')}}">Ecole Formation</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.coach.create')}}">Coach</a></li>
+            </div>
+        </div>
+
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
                 <div>Annuaire</div>
@@ -103,22 +117,6 @@
                 <li class="hover:bg-gray-100 px-5 py-2"><a href="#">ONG</a></li>
             </div>
         </div>
-
-        <div class="relative group">
-            <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
-                <div>Proposer Mes Services</div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </li>
-            <div class="absolute top-[51px] w-52 bg-white hidden group-hover:flex flex-col shadow-lg">
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Ecole Formation</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Freelance</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="#">Coach</a></li>
-            </div>
-        </div>
     </ul>
   </div>
 
@@ -128,8 +126,8 @@
         <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a href="#">Aide</a></li>
         <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a href="#">Contact</a></li>
         <div class="flex flex-col w-full px-5 py-2 gap-2">
-            <li class="border border-vertSombre px-5 py-4 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair"><a href="#">Connexion</a></li>
-            <li class="bg-vertSombre px-5 py-4 text-white font-medium hover:bg-vertClair"><a href="#">Inscription</a></li>
+            <a href="{{ route('login') }}"class="border border-vertSombre px-5 py-4 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair">Connexion</a>
+            <a href="{{ route('register') }}" class="bg-vertSombre px-5 py-4 text-white font-medium hover:bg-vertClair">Inscription</a>
         </div>
     </ul>
     <ul class="flex flex-col w-full text-sm font-medium">

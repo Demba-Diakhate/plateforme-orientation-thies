@@ -1,0 +1,94 @@
+@extends('backoffice.layouts.app')
+
+@section('content')
+@if (session('success'))
+<div class="alert border-0 bg-light-success alert-dismissible fade show py-2">
+     <div class="d-flex align-items-center">
+          <div class="fs-3 text-success"><i class="bi bi-check-circle-fill"></i></div>
+          <div class="ms-3">
+               <div class="text-success">{{ session('success') }}</div>
+          </div>
+     </div>
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+     <div class="breadcrumb-title pe-3">Services</div>
+     <div class="ps-3">
+          <nav aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0 p-0">
+                    <li class="breadcrumb-item">
+                         <a href="{{ route('admin.index') }}"><i class="bx bx-home-alt"></i></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Liste des entreprises</li>
+               </ol>
+          </nav>
+     </div>
+</div>
+
+<div class="card">
+     <div class="card-body">
+          <div class="table-responsive">
+               <table class="table table-striped table-bordered" id="example2">
+                    <thead>
+                         <tr>
+                              <th>Logo</th>
+                              <th>Nom</th>
+                              <th>Email</th>
+                              <th>Téléphone</th>
+                              <th>Adresse</th>
+                              <th>Ville</th>
+                              <th>Pays</th>
+                              <th>Secteur d'activité</th>
+                              <th>Site web</th>
+                              <th>Date inscription</th>
+                              <th>Actions</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         @foreach ($entreprises as $entreprise)
+                         <tr>
+                              <td>
+                                   @if($entreprise->logo)
+                                   <img src="{{ asset('storage/' . $entreprise->logo) }}" alt="Logo" width="40"
+                                        height="40">
+                                   @else
+                                   -
+                                   @endif
+                              </td>
+                              <td>{{ $entreprise->nom }}</td>
+                              <td>{{ $entreprise->email }}</td>
+                              <td>{{ $entreprise->telephone }}</td>
+                              <td>{{ $entreprise->adresse }}</td>
+                              <td>{{ $entreprise->ville }}</td>
+                              <td>{{ $entreprise->pays }}</td>
+                              <td>{{ $entreprise->secteur_activite }}</td>
+                              <td>
+                                   @if($entreprise->site_web)
+                                   <a href="{{ $entreprise->site_web }}" target="_blank">{{ $entreprise->site_web }}</a>
+                                   @else
+                                   -
+                                   @endif
+                              </td>
+                              <td>{{ $entreprise->created_at ? $entreprise->created_at->format('d/m/Y') : '-' }}</td>
+                              <td>
+                                   <a href="#" class="btn btn-info btn-sm" title="Voir"><i class="bi bi-eye"></i></a>
+                                   <a href="#" class="btn btn-warning btn-sm" title="Modifier"><i
+                                             class="bi bi-pencil"></i></a>
+                                   <form action="#" method="POST" style="display:inline;"
+                                        onsubmit="return confirm('Voulez-vous vraiment supprimer cette entreprise ?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Supprimer"><i
+                                                  class="bi bi-trash"></i></button>
+                                   </form>
+                              </td>
+                         </tr>
+                         @endforeach
+                    </tbody>
+               </table>
+          </div>
+     </div>
+</div>
+@endsection

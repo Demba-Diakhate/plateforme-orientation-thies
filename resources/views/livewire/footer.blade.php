@@ -42,7 +42,7 @@
   </div>
 
   <!-- Bas de page -->
-  <div class="bg-vertSombre text-center py-4 text-sm text-white">
+  <div class="bg-gradient-to-r from-vertSombre to-vertClair text-center py-4 text-sm text-white">
     &copy; 2025 - Tous droits réservés.
   </div>
 </footer>

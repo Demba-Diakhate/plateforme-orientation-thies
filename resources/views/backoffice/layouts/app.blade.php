@@ -96,8 +96,8 @@
           <script src="{{asset('assets/js/table-datatable.js')}}"></script>            
 
           <script src="{{asset('assets/js/app.js')}}"></script>
-          <script src="{{asset('assets/js/index2.js')}}"></script>
-
+          <script src="{{asset('assets/js/index4.js')}}"></script>
+          @stack('script')
      </body>
 
 </html>

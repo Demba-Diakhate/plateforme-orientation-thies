@@ -6,7 +6,7 @@
   <div class="p-6 space-y-4">
 
     <!-- Titre -->
-    <h3 class="text-xl font-bold text-blue-900 line-clamp-1 ">
+    <h3 class="text-xl font-bold text-vertSombre line-clamp-1 ">
         {{ $title }}
     </h3>
 
