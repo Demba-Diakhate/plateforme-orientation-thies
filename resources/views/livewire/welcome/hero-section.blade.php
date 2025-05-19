@@ -1,4 +1,4 @@
-<div class="px-5 py-12">
+<div class="px-5 py-12" >
   <div class="max-w-4xl mx-auto mb-12">
     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center leading-12">
     Plateforme Digitale d'Information et d'Orientation sur les <span class="text-vertSombre">Emplois Verts</span> à Thiès
