@@ -87,7 +87,7 @@
     <ul class="flex justify-center items-center text-sm font-medium">
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="/formations">Formations</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="/emploi_stage">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
         
         <div class="relative group">
@@ -135,7 +135,7 @@
     <ul class="flex flex-col w-full text-sm font-medium">
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="/formations">Formations</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="emploi_stage">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Mentorat</a></li>
         <div class="mx-7">
             <li wire:click="toggleService" class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-4 py-4">

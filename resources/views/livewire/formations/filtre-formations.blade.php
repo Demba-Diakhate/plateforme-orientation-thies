@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-10 sm:px-16 px-4 my-12">
     <h1 class="text-3xl font-bold">Choisir domaine</h1>
-    <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10">
+    <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 mx-auto gap-10">
         <button
             class="cursor-pointer bg-violet/10 p-5 flex flex-row gap-6 w-66 duration-300 hover:bg-violet/20 active:bg-violet/20">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -77,20 +77,19 @@
         </button>
     </div>
 
-    <div class="flex flex-col w-full">
-        <div class="flex sm:flex-row flex-col justify-between items-center w-full">
-            <h1 class="text-3xl font-bold my-12">Dernières formations lancées</h1>
+    <div class="flex flex-col gap-10 w-full">
+        <div class="flex sm:flex-row flex-col gap-10 justify-between sm:items-center w-full">
+            <h1 class="text-3xl font-bold sm:my-12">Dernières formations lancées</h1>
             <input 
-                class="w-full h-10 sm:w-auto px-4 py-2 rounded-none text-black focus:outline-none focus:ring-2 focus:ring-white border border-black/15 placeholder:text-black/70" 
+                class="sm:w-1/3 w-4/5 h-10 sm:w-auto px-4 py-2 rounded-none text-black focus:outline-none focus:ring-2 focus:ring-white border border-black/15 placeholder:text-black/70" 
                 type="text" 
                 placeholder="Recherchez"
                 wire.model.live="search">
         </div>
         
         <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
-            @foreach ($datasCards as $card)
+            @forelse ($formations as $card)
                 <livewire:Formations.CardFormation
-                    {{-- wire:key={{$card['id']}}  --}}
                     :name="$card['name']"
                     :description="$card['description']"
                     :image="$card['image']"
@@ -98,7 +97,9 @@
                     {{-- :type="$card['type']" --}}
                     :dateFin="$card['date_fin']"
                 />
-            @endforeach
+            @empty
+            <p class="text-md text-">Pas de formation pour le moment</p>
+            @endforelse
         </div>
 
     </div>

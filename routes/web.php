@@ -6,12 +6,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AnnuaireController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\EmploiController;
 
 Route::get('/', function () {
     return view('frontend.welcome');
 });
 
 Route::get('/formations', [FormationController::class, ('index')]);
+Route::get('/emploi_stage', [EmploiController::class, ('index')]);
+
 /*Route redirection profil*/
 
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil.index');
