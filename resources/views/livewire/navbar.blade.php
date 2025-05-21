@@ -87,7 +87,6 @@
         <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{route('formation')}}">Formations</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{route('emplois')}}">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{ route('mentorat') }}">Mentorat</a></li>
-
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
                 <div>Proposer Mes Services</div>
