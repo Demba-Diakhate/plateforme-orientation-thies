@@ -83,12 +83,12 @@
   <!-- Navbar -->
   <div class="hidden md:block">
     <ul class="flex justify-center items-center text-sm font-medium">
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="{{ route('acceuil') }}">Acceuil</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Formations</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="{{ route('mentorat') }}">Mentorat</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
 
-        <div class="relative group">
+        {{-- <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
                 <div>Proposer Mes Services</div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -102,7 +102,7 @@
                 <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
                 <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.coach.create')}}">Coach</a></li>
             </div>
-        </div>
+        </div> --}}
 
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
@@ -180,10 +180,10 @@
 
     </ul>
     <ul class="flex flex-col w-full text-sm font-medium">
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{ route('acceuil') }}">Acceuil</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Acceuil</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Formations</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{ route('mentorat') }}">Mentorat</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Mentorat</a></li>
         <div class="mx-7">
             <li wire:click="toggleService" class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-4 py-4">
                 <div>Proposer mes services</div>
