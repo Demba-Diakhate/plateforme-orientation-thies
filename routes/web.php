@@ -1,16 +1,35 @@
 <?php
+use App\Http\Controllers\Admin\AnnuairController;
+use App\Http\Controllers\MentoratController;
+use App\Http\Controllers\WelcomeController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AnnuaireController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\AnnuaireController as ControllersAnnuaireController;
+use App\Http\Controllers\AnnuaireEntreprise;
+use App\Http\Controllers\AnnuaireFormation;
+use App\Http\Controllers\AnnuaireONGController;
 use App\Http\Controllers\Frontend\ProposerServiceController;
 use GuzzleHttp\Middleware;
 
-Route::get('/', function () {
-    return view('frontend.welcome');
-});
+// Route page d'acceuil
+Route::get('/', [WelcomeController::class, 'acceuil'])->name('acceuil');
+Route::get('/acceuil', [WelcomeController::class, 'acceuil'])->name('acceuil');
+
+// Route page mentorat
+Route::get('/mentorat', [MentoratController::class, 'mentorat'])->name('mentorat');
+
+// Route page annuaire ONG
+Route::get('/annuaire-ong', [AnnuaireONGController::class, 'index'])->name('annuaire-ong');
+
+// Route page annuaire Entreprise
+Route::get('/annuaire-entreprise', [AnnuaireEntreprise::class, 'index'])->name('annuaire-entreprise');
+
+// Route page annuaire Centre de formation
+Route::get('/annuaire-formation', [AnnuaireFormation::class, 'index'])->name('annuaire-formation');
 
 /*Route redirection profil*/
 
