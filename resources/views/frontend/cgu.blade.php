@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<div class="mx-auto px-4 py-12">
-     <div class="bg-white rounded-lg shadow-lg p-8">
+<div class="mx-auto px-8 py-12">
+     <div class="bg-white rounded-lg shadow-lg px-5">
           <h1 class="text-3xl font-bold text-vertSombre mb-6 text-center">Conditions Générales d’Utilisation (CGU)</h1>
 
           <section class="mb-8">

@@ -1,7 +1,7 @@
 <div class="px-5 py-12" >
   <div class="max-w-4xl mx-auto mb-12">
     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center leading-12">
-    Espace Emploi,  Jeunes <span class="text-transparent bg-clip-text bg-gradient-to-r from-vertSombre to-vertClair">Thièssois </span>, Trouvez votre voie, Bâtissez votre avenir
+    Espace Emploi,<span class="text-transparent bg-clip-text bg-gradient-to-r from-vertSombre to-vertClair">  Jeunes Thièssois </span>, Trouvez votre voie, Bâtissez votre avenir
     </h2>
   </div>
 

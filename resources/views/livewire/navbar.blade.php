@@ -1,8 +1,8 @@
 <nav class="w-full max-w-7xl mx-auto bg-white shadow-sm">
     <!-- Sub Navbar -->
   <div class="flex justify-between p-5 md:border-b border-gray-400">
-    <div class="">
-        <h1 class="text-4xl font-bold">LOGO</h1>
+    <div class="w-32">
+        <img src="{{asset('assets/img/logo.png')}}" class="object-content" />
     </div>
 
     <ul class="hidden md:flex items-center gap-5 text-vertSombre">
@@ -22,7 +22,7 @@
                     Connexion
                 </a>
                 <a href="{{ route('register') }}" class="bg-vertSombre p-2 text-white font-medium hover:bg-vertClair">
-                   Inscription
+                    Inscription
                 </a>
             </div>
         </li>
