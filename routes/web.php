@@ -17,7 +17,7 @@ use GuzzleHttp\Middleware;
 
 // Route page d'acceuil
 Route::get('/', [WelcomeController::class, 'acceuil'])->name('acceuil');
-Route::get('/acceuil', [WelcomeController::class, 'acceuil'])->name('acceuil');
+// Route::get('/acceuil', [WelcomeController::class, 'acceuil'])->name('acceuil');
 
 // Route page mentorat
 Route::get('/mentorat', [MentoratController::class, 'mentorat'])->name('mentorat');
