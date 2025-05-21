@@ -12,13 +12,13 @@
      </div>
 </div>
 
-<div id="pricingModal" class="fixed inset-0 z-50 bg-black/40 flex items-center justify-center hidden">
-     <div class="bg-white shadow-xl max-w-3xl w-full p-6 relative rounded">
+<div id="pricingModal" class="fixed inset-0 z-50 bg-black/40 overflow-scroll hidden">
+     <div class="bg-white shadow-xl max-w-3xl mx-auto p-6 relative rounded">
           <button onclick="document.getElementById('pricingModal').classList.add('hidden')"
-               class="absolute top-3 right-3 text-gray-500 hover:text-vertSombre cursor-pointer text-xl font-bold bg-gray-100 px-2 rounded">X</button>
+               class="absolute top-5 md:top-3 right-3 text-gray-500 hover:text-vertSombre cursor-pointer text-xl font-bold bg-gray-100 px-2 rounded">X</button>
 
-          <h3 class="text-2xl font-bold text-gray-800 mb-4">Nos Offres Publicitaires</h3>
-          <p class="text-gray-600 mb-6">Choisissez l’offre qui vous convient selon votre budget et vos objectifs.</p>
+          <h3 class="hidden md:block text-2xl font-bold text-gray-800 mb-4">Nos Offres Publicitaires</h3>
+          <p class="hidden md:block text-gray-600 mb-6">Choisissez l’offre qui vous convient selon votre budget et vos objectifs.</p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
             <!-- Offre 1 -->
@@ -37,7 +37,7 @@
                 <button class="w-full bg-vertClair hover:bg-vertCLair/90 text-white text-sm py-2 px-4 rounded cursor-pointer">
                     Choisir cette offre
                 </button>
-            </div>
+            </div>  
 
             <!-- Offre 2 -->
             <div class="bg-white rounded shadow-md border border-jaune hover:shadow-xl transition duration-300 p-6">
