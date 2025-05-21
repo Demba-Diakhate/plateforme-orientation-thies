@@ -327,6 +327,27 @@
                     <div class="menu-title">Utilisateurs</div>
                </a>
           </li>
+
+          <li class="menu-label">Gestion Offres d'emplois</li>
+          <li>
+               <li>
+                    <a class="has-arrow" href="javascript:;">
+                         <i class="bi bi-briefcase"></i> Emplois
+                    </a>
+                    <ul>
+                         <li>
+                              <a href="{{ route('entreprise.emplois.index') }}">
+                                   <i class="bi bi-list-ul"></i> Liste des emplois
+                              </a>
+                         </li>
+                         <li>
+                              <a href="{{ route('entreprise.emplois.create') }}">
+                                   <i class="bi bi-plus-circle"></i> Ajouter un emploi
+                              </a>
+                         </li>
+                    </ul>
+               </li>
+          </li>
      </ul>
      <!--end navigation-->
 </aside>

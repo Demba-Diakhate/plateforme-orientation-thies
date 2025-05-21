@@ -13,6 +13,7 @@ use App\Http\Controllers\AnnuaireEntreprise;
 use App\Http\Controllers\AnnuaireFormation;
 use App\Http\Controllers\AnnuaireONGController;
 use App\Http\Controllers\Frontend\ProposerServiceController;
+use GuzzleHttp\Middleware;
 
 // Route page d'acceuil
 Route::get('/', [WelcomeController::class, 'acceuil'])->name('acceuil');
@@ -54,9 +55,23 @@ Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->name('admin.')
     
 });
 
+/**
+ * Routes pour services pages (frontend)
+ */
+
 Route::prefix('service')->name('service.')->controller(ProposerServiceController::class)->group(function () {
     Route::get('entreprise', 'createEntreprise')->name('entreprise.create');
     Route::get('ecole-formation', 'createEcoleFormation')->name('ecole_formation.create');
     Route::get('freelance', 'createFreelance')->name('freelance.create');
     Route::get('coach', 'createCoach')->name('coach.create');
+});
+
+
+
+/**
+ * Route pour l'panel entreprise
+ */
+
+Route::prefix('entreprise')->name('entreprise.')->middleware(['auth'])->group(function () {
+    Route::resource('emplois', \App\Http\Controllers\Entreprise\EmploieController::class);
 });
