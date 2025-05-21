@@ -84,8 +84,8 @@
   <div class="hidden md:block">
     <ul class="flex justify-center items-center text-sm font-medium">
         <li class="hover:bg-gray-100 px-5 py-4"><a href="{{ route('acceuil') }}">Acceuil</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Formations</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="{{route('formation')}}">Formations</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a href="{{route('emplois')}}">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="{{ route('mentorat') }}">Mentorat</a></li>
 
         <div class="relative group">
@@ -181,8 +181,8 @@
     </ul>
     <ul class="flex flex-col w-full text-sm font-medium">
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{ route('acceuil') }}">Acceuil</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Formations</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{route('formation')}}">Formations</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{route('emplois')}}">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="{{ route('mentorat') }}">Mentorat</a></li>
         <div class="mx-7">
             <li wire:click="toggleService" class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-4 py-4">
@@ -192,10 +192,10 @@
                 </svg>
             </li>
             <div :class="$wire.serviceOpen ? 'block' : 'hidden'" class="flex flex-col">
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Ecole formation</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Freelance</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Coach indépendant</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{route('service.entreprise.create')}}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{route('service.ecole_formation.create')}}">Ecole formation</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{route('service.coach.create')}}">Coach indépendant</a></li>
             </div>
         </div>
         <div class="mx-7">

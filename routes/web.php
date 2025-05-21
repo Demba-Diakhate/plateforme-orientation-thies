@@ -3,6 +3,7 @@ use App\Http\Controllers\Admin\AnnuairController;
 use App\Http\Controllers\MentoratController;
 use App\Http\Controllers\WelcomeController;
 
+use App\Http\Controllers\FormationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\AnnuaireFormation;
 use App\Http\Controllers\AnnuaireONGController;
 use App\Http\Controllers\Frontend\ProposerServiceController;
 use GuzzleHttp\Middleware;
+use App\Http\Controllers\EmploiController;
 
 // Route page d'acceuil
 Route::get('/', [WelcomeController::class, 'acceuil'])->name('acceuil');
@@ -30,6 +32,9 @@ Route::get('/annuaire-entreprise', [AnnuaireEntreprise::class, 'index'])->name('
 
 // Route page annuaire Centre de formation
 Route::get('/annuaire-formation', [AnnuaireFormation::class, 'index'])->name('annuaire-formation');
+
+Route::get('/formations', [FormationController::class, ('index')])->name('formation');
+Route::get('/emploi_stage', [EmploiController::class, ('index')])->name('emplois');
 
 /*Route redirection profil*/
 
@@ -75,3 +80,4 @@ Route::middleware(['auth'])->prefix('service')->name('service.')->controller(Pro
 Route::prefix('entreprise')->name('entreprise.')->middleware(['auth'])->group(function () {
     Route::resource('emplois', \App\Http\Controllers\Entreprise\EmploieController::class);
 });
+

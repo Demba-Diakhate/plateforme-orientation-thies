@@ -22,6 +22,6 @@ class DatabaseSeeder extends Seeder
             AnnuaireTableSeed::class,
             ProfilCoachTableSeed::class,
         ]);
-       
+
     }
 }
