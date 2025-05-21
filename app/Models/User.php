@@ -13,6 +13,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
+
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -73,6 +75,10 @@ class User extends Authenticatable
         return $this->belongsTo(ProfilEcoleFormation::class);
     }
 
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function roles()
     {
         return $this->belongsToMany(Role::class);

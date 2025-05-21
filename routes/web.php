@@ -40,7 +40,7 @@ Route::middleware(['auth', 'can:access-admin'])->prefix('admin')->name('admin.')
  * Routes pour services pages (frontend)
  */
 
-Route::prefix('service')->name('service.')->controller(ProposerServiceController::class)->group(function () {
+Route::middleware(['auth'])->prefix('service')->name('service.')->controller(ProposerServiceController::class)->group(function () {
     Route::get('entreprise', 'createEntreprise')->name('entreprise.create');
     Route::get('ecole-formation', 'createEcoleFormation')->name('ecole_formation.create');
     Route::get('freelance', 'createFreelance')->name('freelance.create');
