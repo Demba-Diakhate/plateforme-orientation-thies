@@ -19,23 +19,17 @@ use App\Http\Controllers\EmploiController;
 
 // Route page d'acceuil
 Route::get('/', [WelcomeController::class, 'acceuil'])->name('acceuil');
-// Route::get('/acceuil', [WelcomeController::class, 'acceuil'])->name('acceuil');
 
-// Route page mentorat
+
 Route::get('/mentorat', [MentoratController::class, 'mentorat'])->name('mentorat');
-
-// Route page annuaire ONG
 Route::get('/annuaire-ong', [AnnuaireONGController::class, 'index'])->name('annuaire-ong');
-
-// Route page annuaire Entreprise
 Route::get('/annuaire-entreprise', [AnnuaireEntreprise::class, 'index'])->name('annuaire-entreprise');
-
-// Route page annuaire Centre de formation
 Route::get('/annuaire-formation', [AnnuaireFormation::class, 'index'])->name('annuaire-formation');
-
 Route::get('/formations', [FormationController::class, ('index')])->name('formation');
 Route::get('/emploi_stage', [EmploiController::class, ('index')])->name('emplois');
-
+Route::get('/cgu', function(){
+    return view('frontend.cgu');
+})->name('cgu');
 /*Route redirection profil*/
 
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil.index');

@@ -6,7 +6,7 @@
     </div>
 
     <ul class="hidden md:flex items-center gap-5 text-vertSombre">
-        <li class="font-medium hover:text-vertClair"><a wire:navigate.hover href="#">CGU</a></li>
+        <li class="font-medium hover:text-vertClair"><a wire:navigate.hover href="{{route('cgu')}}">CGU</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">B2B</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">Blog</a></li>
         @guest
@@ -123,7 +123,7 @@
   <!-- NavBar mobile -->
   <div :class="$wire.menuOpen ? 'block' : 'hidden'" class="flex flex-col items-start w-full text-sm font-medium border-t border-gray-400">
     <ul class="flex flex-col w-full text-vertSombre py-4 border-b border-gray-400">
-        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">CGU</a></li>
+        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{route('cgu')}}">CGU</a></li>
         <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">B2B</a></li>
         <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">Blog</a></li>
         @guest
