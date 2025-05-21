@@ -90,15 +90,15 @@
         <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
             @forelse ($formations as $card)
                 <livewire:Formations.CardFormation
-                    :name="$card['name']"
+                    :title="$card['title']"
                     :description="$card['description']"
                     :image="$card['image']"
-                    :link="$card['link']"
-                    {{-- :type="$card['type']" --}}
-                    :dateFin="$card['date_fin']"
+                    :lien="$card['lien']"
+                    :type="$card['type']"
+                    :date_fin="$card['date_fin']"
                 />
             @empty
-            <p class="text-md text-">Pas de formation pour le moment</p>
+            <p class="text-md text-center my-6">Pas de formation displonible pour le moment</p>
             @endforelse
         </div>
 

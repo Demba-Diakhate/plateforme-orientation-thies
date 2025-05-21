@@ -7,13 +7,14 @@ use Livewire\Component;
 class CardFormation extends Component
 {
 
-    public string $dataCard;
+    
     public string $id;
-    public string $name;
-    public string $link;
+    public string $title;
     public string $description;
     public string $image;
-    public string $dateFin;
+    public string $date_fin;
+    public string $autre_fichier;
+    public string $lien;
     public string $type;
 
 

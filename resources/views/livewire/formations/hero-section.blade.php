@@ -41,9 +41,9 @@
             </div>
         </div>
     </div>
-    <div class="absolute md:top-[20%] top-[5%] -z-10 w-full flex flex-col justify-center gap-2 sm:px-16 px-4 sm:my-12 my-20">
-        <h1 class="font-bold text-vertSombre md:text-5xl sm:text-4xl text-3xl bg-transparent sm:my-8">Se former</h1>
-        <h2 class="font-bold text-white md:text-4xl sm:text-3xl text-2xl bg-transparent">Les formations existants en Thiès</h2>
-        <p class="md:text-xl sm:text-base sm:pr-20 text-white sm:my-4">Diverses formations sont disponibles en Thiès pour vous aider à acquérir des compétences solides et de vous préparer au monde du travail.</p>
+    <div class="absolute md:top-[30%] top-[5%] -z-10 w-full flex flex-col justify-center gap-12 sm:px-16 px-4 sm:my-12 my-20">
+        <h1 class="font-bold text-vertSombre md:text-5xl sm:text-5xl text-3xl bg-transparent">Se former</h1>
+        {{-- <h2 class="font-bold text-white md:text-4xl sm:text-3xl text-2xl bg-transparent">Les formations existants en Thiès</h2> --}}
+        <p class="md:text-xl sm:text-base sm:pr-40 text-white">Diverses formations sont disponibles en Thiès pour vous orienter, vous aider à avoir des compétences solides demandés dans le monde du travail.</p>
     </div>
 </div>

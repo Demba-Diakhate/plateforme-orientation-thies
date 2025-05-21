@@ -88,7 +88,7 @@
         <li class="hover:bg-gray-100 px-5 py-4"><a href="/emploi_stage">Emplois/Stages</a></li>
         <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
 
-        <div class="relative group">
+        {{-- <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
                 <div>Proposer Mes Services</div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -102,7 +102,7 @@
                 <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
                 <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.coach.create')}}">Coach</a></li>
             </div>
-        </div>
+        </div> --}}
 
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">

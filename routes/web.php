@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AnnuaireController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\EmploiController;
 
 Route::get('/', function () {
     return view('frontend.welcome');

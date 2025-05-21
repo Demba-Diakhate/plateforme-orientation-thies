@@ -7,7 +7,7 @@
 
     <!-- Titre -->
     <h3 class="text-xl font-bold text-blue-900 line-clamp-1 ">
-        {{ $name }}
+        {{ $title }}
     </h3>
     {{-- <h4 class="font-semibold text-black/80">Domaine : {{$type}}</h4> --}}
 
@@ -15,11 +15,14 @@
     <div class="text-sm text-gray-700 line-clamp-4 ">
         {{ $description }}
     </div>
-    <p class="font-semibold text-sm">Date limite : {{$dateFin}}</p>
+    <div class="flex flex-col gap-1">
+        <p class="font-semibold text-sm">Type : <span class="font-normal">{{$type}}</span></p>
+        <p class="font-semibold text-sm">Date limite : <span class="font-normal">{{$date_fin}}</span></p>
+    </div>
     <!-- Lien -->
     <div class="flex justify-end">
         
-      <a href="{{ $link }}" class="text-blue-900 text-lg hover:underline">
+      <a href="{{ $lien }}" class="text-blue-900 text-lg hover:underline">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-7">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
         </svg>
