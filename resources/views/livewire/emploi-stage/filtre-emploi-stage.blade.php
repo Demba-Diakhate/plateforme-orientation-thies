@@ -18,8 +18,8 @@
         </select>
         <input type="text" class="rounded-xl border-black/10 w-full" placeholder="Recherchez">
     </div>
-    <h1 class="text-3xl font-bold sm:my-12">Dérnières appel à candidature</h1>
-    <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+    <h1 class="text-3xl font-bold sm:my-12">Offres d'emplois</h1>
+    <div id="offres" class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
             @forelse ($emplois as $emploi)
                 <livewire:EmploiStage.CardEmploiStage
                     :title="$emploi['title']"

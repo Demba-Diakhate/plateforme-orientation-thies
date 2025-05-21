@@ -12,7 +12,7 @@ class FormationController extends Controller
      */
     public function index()
     {
-        return view('/frontend/formations');
+        return view('frontend.formations');
     }
 
     /**

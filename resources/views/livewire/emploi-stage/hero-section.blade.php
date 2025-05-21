@@ -7,9 +7,7 @@
             Vous cherchez un stage ou un emploi, explorer les offres dans différents domaines qui  existent en Thiès
         </p>
         <div class="flex flex-row gap-8 text-white text-sm">
-            <button class="bg-gradient-to-r from-vertSombre to-vertClair p-3 border-none shadow cursor-pointer font-semibold rounded-lg">Explorer les offres</button>
-            <a class="bg-gradient-to-r from-vertClair to-vertSombre p-3 shadow font-semibold rounded-lg border-none" href="#">Deposer une offre</a>
-            
+            <a href="#offres" class="bg-gradient-to-r from-vertSombre to-vertClair p-3 border-none shadow cursor-pointer font-semibold rounded-lg">Explorer les offres</a>            
             {{-- @php
                 $role = Auth::user()->roles->pluck('name')->first();
             @endphp
