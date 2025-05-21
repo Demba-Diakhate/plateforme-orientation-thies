@@ -14,7 +14,7 @@
         <li><a href="#" class="hover:underline">Acceuil</a></li>
         <li><a href="#" class="hover:underline">Formations</a></li>
         <li><a href="#" class="hover:underline">Emplois/Stages</a></li>
-        <li><a href="#" class="hover:underline">Mantorat</a></li>
+        <li><a href="#" class="hover:underline">Mentorat</a></li>
         <li><a href="#" class="hover:underline">Services</a></li>
       </ul>
     </div>
