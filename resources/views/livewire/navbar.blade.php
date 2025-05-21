@@ -6,7 +6,7 @@
     </div>
 
     <ul class="hidden md:flex items-center gap-5 text-vertSombre">
-        <li class="font-medium hover:text-vertClair"><a href="#">CGU</a></li>
+        <li class="font-medium hover:text-vertClair"><a wire:navigate.hover href="#">CGU</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">B2B</a></li>
         <li class="font-medium hover:text-vertClair"><a href="#">Blog</a></li>
         @guest
@@ -83,12 +83,11 @@
   <!-- Navbar -->
   <div class="hidden md:block">
     <ul class="flex justify-center items-center text-sm font-medium">
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Acceuil</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Formations</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 px-5 py-4"><a href="#">Mentorat</a></li>
-
-        {{-- <div class="relative group">
+        <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{ route('acceuil') }}">Acceuil</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{route('formation')}}">Formations</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{route('emplois')}}">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 px-5 py-4"><a wire:navigate.hover href="{{ route('mentorat') }}">Mentorat</a></li>
+        <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
                 <div>Proposer Mes Services</div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -97,12 +96,12 @@
                 </svg>
             </li>
             <div class="absolute top-[51px] w-52 bg-white hidden group-hover:flex flex-col shadow-lg">
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.entreprise.create')}}">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.ecole_formation.create')}}">Ecole Formation</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.freelance.create')}}">Freelance</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{route('service.coach.create')}}">Coach</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{route('service.entreprise.create')}}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{route('service.ecole_formation.create')}}">Ecole Formation</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{route('service.freelance.create')}}">Freelance</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{route('service.coach.create')}}">Coach</a></li>
             </div>
-        </div> --}}
+        </div>
 
         <div class="relative group">
             <li class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-5 py-4">
@@ -112,9 +111,9 @@
                 </svg>
             </li>
             <div class="absolute top-[51px] w-52 bg-white hidden group-hover:flex flex-col shadow-lg">
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{ route('annuaire-formation') }}">École de formation</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{ route('annuaire-entreprise') }}">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-5 py-2"><a href="{{ route('annuaire-ong') }}">ONG</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{ route('annuaire-formation') }}">École de formation</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{ route('annuaire-entreprise') }}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="{{ route('annuaire-ong') }}">ONG</a></li>
             </div>
         </div>
     </ul>
@@ -123,13 +122,13 @@
   <!-- NavBar mobile -->
   <div :class="$wire.menuOpen ? 'block' : 'hidden'" class="flex flex-col items-start w-full text-sm font-medium border-t border-gray-400">
     <ul class="flex flex-col w-full text-vertSombre py-4 border-b border-gray-400">
-        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a href="#">CGU</a></li>
-        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a href="#">B2B</a></li>
-        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a href="#">Blog</a></li>
+        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">CGU</a></li>
+        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">B2B</a></li>
+        <li class="font-medium hover:text-vertClair hover:bg-gray-100 px-5 py-2"><a wire:navigate.hover href="#">Blog</a></li>
         @guest
         <li class="flex flex-col w-full px-5 py-2 gap-2">
-            <a href="{{ route('login') }}"class="border border-vertSombre px-5 py-4 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair">Connexion</a>
-            <a href="{{ route('register') }}" class="bg-vertSombre px-5 py-4 text-white font-medium hover:bg-vertClair">Inscription</a>
+            <a wire:navigate.hover href="{{ route('login') }}"class="border border-vertSombre px-5 py-4 text-vertSombre font-medium hover:border-vertClair hover:bg-vertClair">Connexion</a>
+            <a wire:navigate.hover href="{{ route('register') }}" class="bg-vertSombre px-5 py-4 text-white font-medium hover:bg-vertClair">Inscription</a>
         </li>
         @endguest
     @auth
@@ -147,7 +146,7 @@
             
             <ul class="absolute top-10 right-0 w-52 bg-white px-2 py-2 hidden group-hover:flex flex-col gap-2 border border-gray-200 cursor-pointer shadow-lg">
                 <li class="p-2 text-vertSombre font-medium hover:bg-vertClair hover:text-white ">
-                    <a href="{{ route('profil.index') }}" class="w-full">Mon espace</a>
+                    <a wire:navigate.hover href="{{ route('profil.index') }}" class="w-full">Mon espace</a>
                 </li>
                 <li>
                     <form method="POST" action="{{ route('logout') }}">
@@ -180,10 +179,10 @@
 
     </ul>
     <ul class="flex flex-col w-full text-sm font-medium">
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Acceuil</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Formations</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Emplois/Stages</a></li>
-        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a href="#">Mentorat</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a wire:navigate.hover href="{{ route('acceuil') }}">Acceuil</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a wire:navigate.hover href="{{route('formation')}}">Formations</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a wire:navigate.hover href="{{route('emplois')}}">Emplois/Stages</a></li>
+        <li class="hover:bg-gray-100 mx-7 px-4 py-4 border-b border-gray-400"><a wire:navigate.hover href="{{ route('mentorat') }}">Mentorat</a></li>
         <div class="mx-7">
             <li wire:click="toggleService" class="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-4 py-4">
                 <div>Proposer mes services</div>
@@ -192,10 +191,10 @@
                 </svg>
             </li>
             <div :class="$wire.serviceOpen ? 'block' : 'hidden'" class="flex flex-col">
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Ecole formation</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Freelance</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="#">Coach indépendant</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{route('service.entreprise.create')}}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{route('service.ecole_formation.create')}}">Ecole formation</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{route('service.freelance.create')}}">Freelance</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{route('service.coach.create')}}">Coach indépendant</a></li>
             </div>
         </div>
         <div class="mx-7">
@@ -206,9 +205,9 @@
                 </svg>
             </li>
             <div :class="$wire.annuaireOpen ? 'block' : 'hidden'" class="flex flex-col">
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{ route('annuaire-formation') }}">École de formation</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{ route('annuaire-entreprise') }}">Entreprise</a></li>
-                <li class="hover:bg-gray-100 px-7 py-2"><a href="{{ route('annuaire-ong') }}">ONG</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{ route('annuaire-formation') }}">École de formation</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{ route('annuaire-entreprise') }}">Entreprise</a></li>
+                <li class="hover:bg-gray-100 px-7 py-2"><a wire:navigate.hover href="{{ route('annuaire-ong') }}">ONG</a></li>
             </div>
         </div>
     </ul>

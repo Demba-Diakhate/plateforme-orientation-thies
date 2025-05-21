@@ -48,6 +48,7 @@ class Coach extends Component
             'linkedin',
             'site_web'
         ]);
+        
         $data['user_id'] = Auth::user()->id;
 
         if ($this->photo) {
@@ -55,6 +56,15 @@ class Coach extends Component
         }
 
         ProfilCoach::create($data);
+
+        $user = Auth::user();
+
+        $coachRoleId = \App\Models\Role::where('name', 'Coach')->value('id');
+
+        if (!$user->roles()->where('role_id', $coachRoleId)->exists()) {
+            $user->roles()->attach($coachRoleId);
+        }
+
 
         $this->dispatch('swal:success', [
             'title' => 'Succès',

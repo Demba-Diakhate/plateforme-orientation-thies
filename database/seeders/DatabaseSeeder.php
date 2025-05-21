@@ -24,8 +24,11 @@ class DatabaseSeeder extends Seeder
             FormationSeeder::class,
             RoleTableSeed::class,
             AnnuaireTableSeed::class,
-
+            // FormationSeeder::class,
+            RoleTableSeed::class,
+            // AnnuaireTableSeed::class,
+            // ProfilCoachTableSeed::class,
         ]);
-       
+
     }
 }
