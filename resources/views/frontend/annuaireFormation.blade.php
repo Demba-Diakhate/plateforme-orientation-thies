@@ -50,7 +50,7 @@
                         <tr class="border-b border-vertSombre hover:bg-vertClair/10">
                             <td class="py-2 px-4">
                                 @if($entreprise->logo)
-                                    <img src="{{ $entreprise->logo }}" alt="Logo" class="h-10 w-10 rounded-full object-contain">
+                                    <img src="{{'storage/'.$entreprise->logo }}" alt="Logo" class="h-10 w-10 rounded-full object-contain">
                                 @else
                                     <span class="text-gray-400 italic">Aucun</span>
                                 @endif
